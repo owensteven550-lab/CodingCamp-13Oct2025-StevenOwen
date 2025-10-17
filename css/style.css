@@ -1,0 +1,230 @@
+/* ====== GLOBAL ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    background: linear-gradient(to bottom, #4facfe, #ff2ead);
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #9C27B0 0%, #D81B60 50%, #E91E63 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: scroll;
+}
+
+/* ====== Tampilan Form ======*/
+form {
+    width: 500px;              /* lebar kotak */
+    margin: 50px auto;         /* posisi di tengah */
+    padding: 20px;             /* jarak isi dengan tepi */
+    background-color: white; /* warna abu-abu muda */
+    border: 1px solid linear-gradient(90deg, #9C27B0 0%, #D81B60 50%, #E91E63 100%);    /* garis pinggir */
+    border-radius: 15px;       /* sudut melengkung */
+    box-shadow: 0 4px 8px rgba(136, 136, 136, 0.1); /* efek bayangan */
+    font-family: Arial, sans-serif;
+}
+
+/* ====== desain ikon filter ======*/
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper i {
+    color: black;
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-wrapper select {
+    padding-left: 30px; /* ruang untuk ikon */
+}
+
+/* ====== desain filter ======*/
+.select-filter {
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+    color: #fff;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 5px px rgba(0,0,0,0.1);
+    text-align-last: center;
+    margin-top: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 40px;
+    width: auto;
+    border-radius: 6px;
+}
+
+/* Warna background dan teks untuk semua option */
+#filter option {
+    font-weight: 400;
+    background-color: white;   /* warna gelap / sesuaikan */
+    color: black;         /* warna teks */
+}
+
+/* ====== Desain Delete ======*/
+.delete {
+    font-size: 13px;
+    font-weight: 400;
+    transition: opacity 0.2s;
+    float: right;
+    margin-top: 10px;
+    color: #fff;
+    padding: 5px 10px;
+    height: 40px;
+    width: 90px;
+    cursor: pointer;
+    text-align: middle;
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(34, 0, 255, 0.311);
+    
+}
+
+/* ====== Desain Judul ======*/
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+
+/* ====== Desain Input dan Button ====== */
+input, select {
+    padding: 5px;
+    margin-right: 5px;
+    height: 20px;
+    width: 200px;
+    color: black;
+    background-color: white;
+    border: 1px solid pink;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(34, 0, 255, 0.311);
+}
+
+/* ====== Desain Delete ======*/
+.tambah {
+    font-weight: 400;
+    transition: opacity 0.2s;
+    font-size: 15px;
+    color: #fff;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+    text-align: middle;
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(34, 0, 255, 0.311);
+}
+
+/* ====== Desain Tombol ======*/
+button {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    gap: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: white;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    text-align: middle;
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(34, 0, 255, 0.311);
+}
+
+/* ====== Desain Tabel ====== */
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: black;
+    border: 1px solid rgb(186, 82, 209); 
+    box-shadow: 0 4px 8px rgb(186, 82, 209);
+}
+
+/* ====== Desain tabel th ======*/
+th {
+    padding: 8px;
+    text-align: left;
+    color: white;
+    border-color: rgb(186, 82, 209);
+    background: rgb(186, 82, 209);
+} 
+
+/* Warna baris ganjil (1, 3, 5, ...) */
+tr:nth-child(odd) {
+    background-color: white;   /* putih */
+}
+
+/* Warna baris genap (2, 4, 6, ...) */
+tr:nth-child(even) {
+    background-color: rgb(255, 175, 255);   /* abu-abu */
+}
+
+/* ====== Desain tabel td ======*/
+td {
+    padding: 8px;
+    font-size: 15px;
+    text-align: left;
+    color: black;
+    border: black;
+}
+
+/* ====== Desain Modal Backdrop ====== */
+.modal-backdrop {
+    display: none;              /* awalnya tersembunyi */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== Desain Modal Box ====== */
+.modal {
+    background: rgb(63, 70, 77);
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+/* ====== Desain Nama Tabel Di Bagian Modal ======*/
+.modal h3 {
+    margin-top: 0;
+    color: lightblue;
+    text-align: center;
+}
+
+.modal label {
+    display: block;
+    color: lightblue;
+    margin-top: 10px;
+}
+
+.modal input, 
+.modal select {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

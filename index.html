@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List - Steven Owen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <form id="form">
+        <!--Judul-->
+        <h1>Todo List</h1>
+        <br>
+
+        <!--isi Form Todo List-->
+        <input type="text" id="list" placeholder="Add a todo...">
+        <input type="date" id="tgl" >
+        <button id="tambah" type="button" class="tambah">+</button>
+        <br>
+        <div class="select-wrapper">
+            <i class="fa-solid fa-filter"></i>
+        <select name="filter" id="filter" class="select-filter">
+            <option value="filter" disabled selected hidden>FILTER</option>
+            <option value="by_task">By Task</option>
+            <option value="by_date">By Date</option>
+            <option value="by_status">By Status</option>
+        </select>
+        <button id="deleteall" type="button" class="delete"><b>Delete All</b></button>
+        </div>
+        <table border="1" id="mytable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+                <tr id="no_task">
+                    <td colspan="5" style="text-align:center;">No Task Found</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    
+      <!-- form edit -->
+        <div id="modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal" role="document" aria-labelledby="modalTitle">
+                <h3 id="modalTitle">Edit Task</h3>
+                <label for="editTask">Tugas Baru</label>
+                <input type="text" id="editTask" />
+
+                <label for="editDate">Tanggal</label>
+                <input type="date" id="editDate" />
+
+                <label for="editStatus">Status</label>
+                <select id="editStatus">
+                    <option value="Belum Selesai">Belum Selesai</option>
+                    <option value="Selesai">Selesai</option>
+                </select>
+
+                <div class="row">
+                    <button id="closeModal" type="button">Batal</button>
+                    <button id="saveEdit" type="button">Simpan</button>
+                </div>
+            </div>
+        </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
